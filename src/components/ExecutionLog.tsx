@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { Terminal } from 'lucide-react';
 import type { LogEntry } from '@/types';
 
@@ -22,13 +23,20 @@ const logPrefix: Record<string, string> = {
 };
 
 export function ExecutionLog({ logs }: ExecutionLogProps) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (el) el.scrollTop = el.scrollHeight;
+  }, [logs]);
+
   return (
     <div className="bg-slate-900 rounded-xl overflow-hidden">
       <div className="flex items-center gap-2 px-4 py-2.5 bg-slate-800 border-b border-slate-700">
         <Terminal className="w-4 h-4 text-slate-400" />
         <span className="text-sm font-medium text-slate-300">Execution Log</span>
       </div>
-      <div className="p-4 max-h-64 overflow-y-auto font-mono text-xs space-y-1.5">
+      <div ref={scrollRef} className="p-4 max-h-64 overflow-y-auto font-mono text-xs space-y-1.5">
         {logs.length === 0 ? (
           <div className="text-slate-500 italic">No logs yet. Start a simulation to see step-by-step output.</div>
         ) : (
