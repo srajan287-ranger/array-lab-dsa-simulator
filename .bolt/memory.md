@@ -19,12 +19,14 @@
 - `@/` path alias for imports (`src/`).
 - Navigation uses tabs/sections for different data-structure topics.
 - Step-by-step algorithm visualizations are a core UX pattern.
+- Execution log auto-scrolls to bottom whenever a new entry appears (during playback and stepping forward); snaps back to latest on next step even if user scrolled up to read earlier entries.
 - Beautiful, non-cookie-cutter design per global instructions.
 
 ## Decisions, constraints & rationale
 
 - **Sorting tab renamed**: removed "Assignment 1" prefix; navigation label is now "Sorting" and page heading reads "Sorting Algorithms". Seven algorithms and simulations unchanged.
 - Only UI labels updated; no functional changes to simulations.
+- **Execution log auto-scroll**: implemented across all simulation tabs including Sorting; ensures latest log entry is always visible without manual scrolling.
 
 ## Open questions & assumptions
 
