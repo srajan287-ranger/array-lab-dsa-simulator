@@ -107,7 +107,7 @@ export function Assignment1Tab() {
       <div className="bg-white rounded-xl border border-slate-200 p-5">
         <div className="flex items-center gap-2 mb-3">
           <GraduationCap className="w-5 h-5 text-blue-600" />
-          <h2 className="text-lg font-bold text-slate-800">Assignment 1 — Sorting Algorithms</h2>
+          <h2 className="text-lg font-bold text-slate-800">Sorting Algorithms</h2>
         </div>
         <p className="text-sm text-slate-500 leading-relaxed">
           Seven sorting algorithms, each with an interactive step-by-step simulation, its algorithm in

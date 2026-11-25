@@ -13,7 +13,7 @@ const tabs: { id: TabId; label: string; icon: typeof BookOpen }[] = [
   { id: 'deletion', label: 'Deletion', icon: Trash2 },
   { id: 'linear', label: 'Linear Search', icon: Search },
   { id: 'binary', label: 'Binary Search', icon: ArrowRightLeft },
-  { id: 'assignment1', label: 'Assignment 1 — Sorting', icon: GraduationCap },
+  { id: 'assignment1', label: 'Sorting', icon: GraduationCap },
   { id: 'learn', label: 'Learn', icon: BookOpen },
 ];
 
