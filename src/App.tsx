@@ -5,6 +5,7 @@ import { InsertionTab } from '@/tabs/InsertionTab';
 import { DeletionTab } from '@/tabs/DeletionTab';
 import { LinearSearchTab } from '@/tabs/LinearSearchTab';
 import { BinarySearchTab } from '@/tabs/BinarySearchTab';
+import { Assignment1Tab } from '@/tabs/Assignment1Tab';
 import { LearnTab } from '@/tabs/LearnTab';
 import { Brackets, Info } from 'lucide-react';
 
@@ -55,6 +56,7 @@ function App() {
         {activeTab === 'deletion' && <DeletionTab />}
         {activeTab === 'linear' && <LinearSearchTab />}
         {activeTab === 'binary' && <BinarySearchTab />}
+        {activeTab === 'assignment1' && <Assignment1Tab />}
         {activeTab === 'learn' && <LearnTab />}
       </main>
 

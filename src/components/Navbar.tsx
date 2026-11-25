@@ -1,6 +1,6 @@
-import { BookOpen, Brackets, Search, ArrowRightLeft, Trash2, Plus, Calculator } from 'lucide-react';
+import { BookOpen, Brackets, Search, ArrowRightLeft, Trash2, Plus, Calculator, GraduationCap } from 'lucide-react';
 
-export type TabId = 'address' | 'insertion' | 'deletion' | 'linear' | 'binary' | 'learn';
+export type TabId = 'address' | 'insertion' | 'deletion' | 'linear' | 'binary' | 'assignment1' | 'learn';
 
 interface NavbarProps {
   activeTab: TabId;
@@ -13,6 +13,7 @@ const tabs: { id: TabId; label: string; icon: typeof BookOpen }[] = [
   { id: 'deletion', label: 'Deletion', icon: Trash2 },
   { id: 'linear', label: 'Linear Search', icon: Search },
   { id: 'binary', label: 'Binary Search', icon: ArrowRightLeft },
+  { id: 'assignment1', label: 'Assignment 1 — Sorting', icon: GraduationCap },
   { id: 'learn', label: 'Learn', icon: BookOpen },
 ];
 
